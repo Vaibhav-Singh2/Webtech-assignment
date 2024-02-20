@@ -10,7 +10,9 @@
 // truncates it to    
 // 50 characters if it exceeds the limit.
 
-$articleTitle = "Hello Guys this is my very long title";
+$articleTitle = "Hello Guys this is my very long title,
+                 Hello Guys this is my very long title,
+                 Hello Guys this is my very long title";
 
 if (strlen($articleTitle) > 50) {
     $truncated = substr($articleTitle, 0, 50);

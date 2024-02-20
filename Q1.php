@@ -8,7 +8,7 @@ function totalPrize($items)
 {
     $totalPrice = 0;
     foreach ($items as $item) {
-        $totalPrice += $item['price'];
+        $totalPrice += $item["price"];
     }
     if ($totalPrice > 5000) {
         $discountedPrice = $totalPrice * 0.9;
@@ -18,9 +18,10 @@ function totalPrize($items)
     }
 }
 
-$item = array(
+$items = array(
     array("item" => "hoddy", "price" => 2000),
     array("item" => "jaket", "price" => 2500),
     array("item" => "shoe", "price" => 1500),
 );
-echo totalPrize($items);
+$finalPrice = totalPrize($items);
+echo "FinalPrice is: " . $finalPrice;
